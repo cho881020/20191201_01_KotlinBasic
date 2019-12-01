@@ -12,11 +12,15 @@ class MainActivity : AppCompatActivity() {
 
 //        Ctrl + / 주석
 //        버튼 (okBtn)이 눌리면
-//        EditText (inputEdt)에 적힌 값을 받아서
-//        TextView (resultTxt)의 내용으로 반영.
+//        EditText (inputEdt)에 적힌 값(text)을 받아서
+//        TextView (resultTxt)의 내용(text)으로 반영.
 
         okBtn.setOnClickListener {
 //            Ctrl + K 커밋
+
+            var inputString = inputEdt.text.toString()
+            resultTxt.text = inputString
+
         }
 
 
