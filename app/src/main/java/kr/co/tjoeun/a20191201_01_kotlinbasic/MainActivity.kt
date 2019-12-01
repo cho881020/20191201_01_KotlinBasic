@@ -2,6 +2,7 @@ package kr.co.tjoeun.a20191201_01_kotlinbasic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,9 +19,16 @@ class MainActivity : AppCompatActivity() {
         okBtn.setOnClickListener {
 //            Ctrl + K 커밋
 
-            var inputString = inputEdt.text.toString()
-            resultTxt.text = inputString
+            var inputString = inputEdt.text.toString()  // get => 내용물 받아오기.
+            resultTxt.text = inputString // set => 내용물 설정하기.
 
+        }
+
+        okBtn.setOnLongClickListener {
+
+            resultTxt.text = "초기상태"
+
+            return@setOnLongClickListener true
         }
 
 
